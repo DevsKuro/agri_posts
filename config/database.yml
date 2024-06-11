@@ -9,7 +9,7 @@ default: &default
 development:
   <<: *default
   database: agri_posts_development
-  username: agri_posts
+  username: agri_api
   password: ds20g9yB76_l
   host: localhost
   port: 5432
@@ -17,7 +17,7 @@ development:
 production:
   <<: *default
   database: agri_posts_production
-  username: agri_posts
+  username: agri_api
   password: ds20g9yB76_l
   host: localhost
   port: 5432
