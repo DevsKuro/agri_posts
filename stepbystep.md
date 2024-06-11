@@ -8,3 +8,7 @@ rails g model post name:string details:string
 rails db:create
 rails db:migrate
 
+# Generate v1 api, post controller 
+rails g controller v1/posts
+
+# added routes for index / posts
