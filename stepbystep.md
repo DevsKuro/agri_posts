@@ -11,4 +11,7 @@ rails db:migrate
 # Generate v1 api, post controller 
 rails g controller v1/posts
 
-# added routes for index / posts
+# added route for index / get all posts
+# added route for delete / destroy
+# added route for show certain post
+# added route for create a new post
