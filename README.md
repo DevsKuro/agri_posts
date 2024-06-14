@@ -1,13 +1,3 @@
-# README
-
-API
-
-gem install rails
-
-Frontend
-
-npm install
-
 # Presentation
 
 The following project was developed to be presented as a technical briefing by Felipe Lagos Pinto for AGI company.
