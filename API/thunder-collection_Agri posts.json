@@ -1,0 +1,64 @@
+{
+    "clientName": "Thunder Client",
+    "collectionName": "Agri posts",
+    "collectionId": "cf03247a-bfb8-4f3d-809d-1aa338c76c1b",
+    "dateExported": "2024-06-11T22:30:05.918Z",
+    "version": "1.2",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "8151367c-37c0-4d9f-bb0b-3ad2bbc4eaef",
+            "colId": "cf03247a-bfb8-4f3d-809d-1aa338c76c1b",
+            "containerId": "",
+            "name": "Get all Posts",
+            "url": "http://127.0.0.1:3000/v1/posts",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2024-06-11T21:49:02.673Z",
+            "modified": "2024-06-11T21:49:02.673Z",
+            "headers": []
+        },
+        {
+            "_id": "35bfd56a-fde5-4967-8425-d7b9d6911501",
+            "colId": "cf03247a-bfb8-4f3d-809d-1aa338c76c1b",
+            "containerId": "",
+            "name": "Create Post",
+            "url": "http://127.0.0.1:3000/v1/posts",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2024-06-11T22:04:58.269Z",
+            "modified": "2024-06-11T22:04:58.269Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\": \"nuevo4\",\n  \"detail\": \"probanding\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "6536ea2c-6c1f-47c3-ae53-b620779c4015",
+            "colId": "cf03247a-bfb8-4f3d-809d-1aa338c76c1b",
+            "containerId": "",
+            "name": "Delete Post",
+            "url": "http://127.0.0.1:3000/v1/posts/4",
+            "method": "DELETE",
+            "sortNum": 30000,
+            "created": "2024-06-11T22:07:17.982Z",
+            "modified": "2024-06-11T22:25:39.018Z",
+            "headers": []
+        },
+        {
+            "_id": "cc5d9936-9e99-492b-be20-c0c5cdb49a56",
+            "colId": "cf03247a-bfb8-4f3d-809d-1aa338c76c1b",
+            "containerId": "",
+            "name": "Get Post by Id",
+            "url": "http://localhost:3000/v1/posts/2",
+            "method": "GET",
+            "sortNum": 40000,
+            "created": "2024-06-11T22:29:23.256Z",
+            "modified": "2024-06-11T22:29:23.256Z",
+            "headers": []
+        }
+    ],
+    "ref": "DWY_0nTt7HPRst6XsHgLC68dRGzOiAvZm0k6S042CvtM-dm-nTRy_hr7yguM8wf3kSJjOp_PvWYxceWXjY78NQ"
+}
