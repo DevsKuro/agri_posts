@@ -10,7 +10,7 @@ export default function CreateNewPost() {
         const name = formData.get('postName') as string;
         const details = formData.get('postDetails') as string;
 
-        createPost({ name: name, details: details });
+        createPost({ name: name, details: details, id: ""});
         form.reset();
     }
 

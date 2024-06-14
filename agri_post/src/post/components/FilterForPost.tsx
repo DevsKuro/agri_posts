@@ -1,7 +1,7 @@
 import { usePostActions } from "../../hooks/usePostActions"
 
 export default function FilterForPosts() {
-    const { filteredPosts, restFilter } = usePostActions();
+    const { filteredPosts } = usePostActions();
     const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault()
 
@@ -12,13 +12,10 @@ export default function FilterForPosts() {
         filteredPosts(name);
         form.reset();
     }
-    const handleReset = () => {
-        restFilter();
-    }
 
     return (
         <div>
-            <h2>Create Post</h2>
+            <h2>Filter Post</h2>
             <form onSubmit={handleSubmit}>
                 <p>
                     Name:
@@ -27,9 +24,6 @@ export default function FilterForPosts() {
                 </p>
                 <button type="submit" style={{ marginTop: "16px" }}>
                     Search
-                </button>
-                <button onClick={() => handleReset}>
-                    Reset
                 </button>
             </form>
         </div>

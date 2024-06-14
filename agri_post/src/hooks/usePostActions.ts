@@ -1,4 +1,4 @@
-import { deletePostById, filterByName, addPost, Post, PostWithId, getAll } from "../store/posts/slice";
+import { deletePostById, filterByName, addPost, PostWithId, getAll } from "../store/posts/slice";
 import { useAppDispatch } from "./store";
 
 
@@ -16,13 +16,9 @@ export const usePostActions = () => {
     const filteredPosts = (name: string) => {
         dispatch(filterByName(name));
     };
-    
-    const restFilter = () => {
-        dispatch(restPostFilter());
-    };
 
-    const createPost = ({ name, details }: Post) => {
-        dispatch(addPost({ name, details }));
+    const createPost = ({ name, details, id }: PostWithId) => {
+        dispatch(addPost({ name, details, id}));
     }
 
     return {
@@ -30,7 +26,6 @@ export const usePostActions = () => {
         filteredPosts,
         createPost,
         getAllPosts,
-        restFilter
     };
 }
 

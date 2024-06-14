@@ -33,7 +33,7 @@ const PLACEHOLDER_POST: PostWithId[] = [
 ]
 
 const initialState: PostWithId[] = (() => {
-    const persistentState = localStorage.getItem('agri_posts_persistent_data');
+    const persistentState = localStorage.getItem(`${import.meta.env.VITE_STORE_NAME}`);
     if (persistentState) {
         return JSON.parse(persistentState).posts;
     }
@@ -50,9 +50,8 @@ export const postSlice = createSlice({
             state = action.payload;
             return state;
         },
-        addPost: (state, action: PayloadAction<Post>) => {
-            const id = crypto.randomUUID();
-            return [...state, { id, ...action.payload }]
+        addPost: (state, action: PayloadAction<PostWithId>) => {
+            return [...state, action.payload]
         },
         deletePostById: (state, action: PayloadAction<string>) => {
             const id = action.payload;
@@ -62,9 +61,6 @@ export const postSlice = createSlice({
             const name = action.payload;
             return state.filter((post) => post.name === name);
         },
-        restPostFilter: (state) => {
-            return initialState
-        }
     }
 });
 

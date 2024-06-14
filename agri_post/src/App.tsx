@@ -8,7 +8,9 @@ function App() {
   return (
     <>
       <FilterForPosts />
+      <hr />
       <ListOfPosts />
+      <hr />
       <CreateNewPost />
     </>
   )

@@ -2,13 +2,12 @@ import { useEffect } from "react";
 import { useAppSelector } from "../../hooks/store";
 import { usePostActions } from "../../hooks/usePostActions";
 
-
 export default function ListOfPosts() {
     const posts = useAppSelector((state) => state.posts);
     const { deletePost, getAllPosts } = usePostActions ();
 
     useEffect(() => {
-        fetch("http://localhost:3000/v1/posts/")
+        fetch(`${import.meta.env.VITE_API_ROUTE}`)
         .then((res) => res.json())
         .then((data) => getAllPosts(data))
         .catch((err) => console.log(err));
@@ -16,7 +15,7 @@ export default function ListOfPosts() {
 
     return (
         <div>
-            
+            <h2>Posts</h2>
             <table>
                 <thead>
                     <tr>
